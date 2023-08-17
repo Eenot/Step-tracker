@@ -1,10 +1,10 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         while (true) {
             printMenu();
-            int i = sc.nextInt();
+            int i = scanner.nextInt();
             if (i == 1) {
                 System.out.println("Выполняется компанда 1");
             } else if (i == 2) {
@@ -13,7 +13,7 @@ public class Main {
                 System.out.println("Выполняется компанда 3");
             } else if (i == 0) {
                 System.out.println("Пока!");
-                sc.close();
+                scanner.close();
                 break;
             } else {
                 System.out.println("Такой команды нет");

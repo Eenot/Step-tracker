@@ -2,15 +2,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        StepTracker tracker = new StepTracker();
+
+
         while (true) {
             printMenu();
             int i = scanner.nextInt();
             if (i == 1) {
-                System.out.println("Выполняется компанда 1");
+                tracker.addNewNumberStepsPerDay(scanner);
             } else if (i == 2) {
-                System.out.println("Выполняется компанда 2");
+                tracker.goalByStepsPerDay(scanner);
             } else if (i == 3) {
-                System.out.println("Выполняется компанда 3");
+                tracker.printStatistic(scanner);
             } else if (i == 0) {
                 System.out.println("Пока!");
                 scanner.close();

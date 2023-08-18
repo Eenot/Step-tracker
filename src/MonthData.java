@@ -19,7 +19,7 @@ public class MonthData {
         return sumSteps;
     }
 
-    int maxSteps() {
+    int getMaxSteps() {
         int maxSteps = 0;
         for (int day : days) {
             if (maxSteps < day) {
@@ -29,7 +29,7 @@ public class MonthData {
         return maxSteps;
     }
 
-    int bestSeries(int goal) {
+    int getBestSeries(int goal) {
         int currentSeries = 0;
         int finalSeries = 0;
         for (int day : days) {

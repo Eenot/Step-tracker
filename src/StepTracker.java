@@ -25,7 +25,6 @@ public class StepTracker {
         return day;
     }
 
-
     int checkMonth(Scanner scanner) {
         int month = scanner.nextInt();
         while (true) {

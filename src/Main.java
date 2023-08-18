@@ -4,24 +4,26 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         StepTracker tracker = new StepTracker();
 
-
         while (true) {
             printMenu();
             int i = scanner.nextInt();
-            if (i == 1) {
-                tracker.addNewNumberStepsPerDay(scanner);
-            } else if (i == 2) {
-                tracker.goalByStepsPerDay(scanner);
-            } else if (i == 3) {
-                tracker.printStatistic(scanner);
-            } else if (i == 0) {
-                System.out.println("Пока!");
-                scanner.close();
-                break;
-            } else {
-                System.out.println("Такой команды нет");
+            switch (i) {
+                case 1:
+                    tracker.addNewNumberStepsPerDay(scanner);
+                    break;
+                case 2:
+                    tracker.goalByStepsPerDay(scanner);
+                    break;
+                case 3:
+                    tracker.printStatistic(scanner);
+                    break;
+                case 0:
+                    System.out.println("Пока!");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Такой команды нет");
             }
-
         }
     }
 

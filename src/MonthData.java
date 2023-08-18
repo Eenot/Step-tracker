@@ -1,6 +1,5 @@
 public class MonthData {
     int[] days;
-
     MonthData() {
         days = new int[30];
     }
